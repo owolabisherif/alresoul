@@ -1,0 +1,25 @@
+ .cls-1,
+ .cls-2,
+ .cls-3 {
+     fill: none;
+ }
+
+ .cls-1,
+ .cls-3 {
+     stroke: #f5f5f5;
+     stroke-linecap: round;
+     stroke-linejoin: round;
+     stroke-width: 2.61px;
+ }
+
+ .cls-4 {
+     fill: url(#linear-gradient);
+ }
+
+ .cls-3 {
+     stroke-dasharray: 0 7.65;
+ }
+
+ .cls-5 {
+     clip-path: url(#clippath);
+ }

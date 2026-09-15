@@ -1,0 +1,11 @@
+.cls-1 {
+    fill: none;
+}
+
+.cls-2 {
+    fill: url(#linear-gradient);
+}
+
+.cls-3 {
+    clip-path: url(#clippath);
+}

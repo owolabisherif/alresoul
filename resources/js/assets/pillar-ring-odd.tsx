@@ -1,0 +1,87 @@
+import './css/pillar-ring-odd.css';
+import { cn } from '@/lib/utils';
+
+export default function PillarRingOdd({ className }: { className?: string }) {
+    return (
+        <svg
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 177.65 128.67"
+        >
+            <defs>
+                <clipPath id="clippath">
+                    <rect className="cls-2" width="177.65" height="128.67" />
+                </clipPath>
+                <linearGradient
+                    id="linear-gradient"
+                    x1="-104.24"
+                    y1="-709.74"
+                    x2="-103.24"
+                    y2="-709.74"
+                    gradientTransform="translate(13188.1705 -89726.8736) scale(126.512 -126.512)"
+                    gradientUnits="userSpaceOnUse"
+                >
+                    <stop offset="0" stop-color="#ffd686" />
+                    <stop offset=".49" stop-color="#b78e4c" />
+                    <stop offset="1" stop-color="#815b23" />
+                </linearGradient>
+                <clipPath id="clippath-1">
+                    <path
+                        className="cls-2"
+                        d="M257.61-290.85V71.94s93.1-57.67,316.1,0c75.06,19.41,152.89,6.44,241.61-6.54,104-15.21,222.97-30.42,370.02,6.54,187.57,47.14,281.38,0,281.38,0v-362.79H257.61Z"
+                    />
+                </clipPath>
+                <linearGradient
+                    id="linear-gradient-2"
+                    x1="-105.07"
+                    y1="-703.76"
+                    x2="-104.07"
+                    y2="-703.76"
+                    gradientTransform="translate(481545.4348 -3238687.6833) scale(4601.8478 -4601.8478)"
+                    gradientUnits="userSpaceOnUse"
+                >
+                    <stop offset="0" stop-color="#feef82" />
+                    <stop offset=".05" stop-color="#b88d2d" />
+                    <stop offset=".2" stop-color="#fef1a8" />
+                    <stop offset=".3" stop-color="#c09846" />
+                    <stop offset=".51" stop-color="#f4ea9d" />
+                    <stop offset=".56" stop-color="#e8d88a" />
+                    <stop offset=".64" stop-color="#d9bf72" />
+                    <stop offset=".69" stop-color="#d4b769" />
+                    <stop offset=".77" stop-color="#fef1a8" />
+                    <stop offset=".92" stop-color="#c19b2e" />
+                    <stop offset="1" stop-color="#fef1a8" />
+                </linearGradient>
+            </defs>
+            <g className="cls-7">
+                <path
+                    className="cls-6"
+                    d="M64.33,126.93v-1c34.02-.06,61.53-27.58,61.6-61.59-.06-34.02-27.58-61.53-61.6-61.6C30.32,2.8,2.8,30.32,2.74,64.34c.06,34.02,27.58,61.53,61.59,61.6v1s0,1,0,1c-35.12,0-63.59-28.47-63.6-63.59C.74,29.21,29.21.74,64.33.74c35.12,0,63.59,28.47,63.59,63.6,0,35.12-28.47,63.59-63.6,63.6h0v-1Z"
+                />
+                <path
+                    className="cls-3"
+                    d="M128.84,69.69c2.79,8.59,10.23,15.09,19.35,16.52"
+                />
+                <path
+                    className="cls-3"
+                    d="M159.52,85.32c8.59-2.79,15.09-10.23,16.52-19.35"
+                />
+                <path
+                    className="cls-1"
+                    d="M176.34,62.16h0M152,86.5h0M127.66,62.16h0"
+                />
+            </g>
+            <g className="cls-5">
+                <rect
+                    className="cls-4"
+                    x="229.52"
+                    y="-538.28"
+                    width="1265.27"
+                    height="904.78"
+                    transform="translate(128.1 374.39) rotate(-26.4)"
+                />
+            </g>
+        </svg>
+    );
+}
