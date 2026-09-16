@@ -1,1 +1,0 @@
-import{i as e}from"./wayfinder-DrgPLIQ0.js";import{Cn as t}from"./app-ZZPLSFSV.js";var n=t(),r=e();function i(){let e=(0,n.c)(1),t;return e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=(0,r.jsx)(`p`,{children:` بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ`}),e[0]=t):t=e[0],t}export{i as t};

@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', HomeController::class)->name('home');
+Route::inertia('/more', 'guest/more')->name('more');
 Route::inertia('/about', 'guest/about')->name('about');
 Route::inertia('/events', 'guest/event', ["page" => url("/") . "/api/all/events"])->name('event');
 Route::inertia('/news', 'guest/news', ["page" => url("/") . "/api/all/articles"])->name('news');

@@ -253,13 +253,13 @@ export default function GuestHeaderLayout({
                         )}
                     </nav>
 
-                    <div className="flex items-center">
+                    <div className="hidden items-center md:flex">
                         <>
                             <Link
                                 href={index()}
                                 className="flex w-fit items-center justify-center gap-x-2 rounded-md border border-white bg-gradient-to-br from-red-500 via-red-600 to-red-800 p-1.5 text-sm font-bold text-white"
                             >
-                                <p className="hidden md:block">ألرسول ميديا</p>
+                                <p className="">ألرسول ميديا</p>
                                 <TvMinimalPlay className="sizemd:size-5" />
                             </Link>
                         </>

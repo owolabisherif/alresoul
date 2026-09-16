@@ -5,6 +5,13 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import TwitchPlayer from '../twitch-player';
 import { ProgramTypeProp } from '@/types/global';
+import { FastForwardIcon, PlayCircleIcon } from 'lucide-react';
+import {
+    IconPlayerSkipBack,
+    IconPlayerSkipBackFilled,
+    IconPlayerSkipForward,
+    IconPlayerSkipForwardFilled,
+} from '@tabler/icons-react';
 
 export default function LiveProgram({
     programs,
@@ -78,11 +85,16 @@ export default function LiveProgram({
                     </div>
                 </div>
             </div>
-            <div className="animated mx-5 mt-5 max-w-7xl shadow-sm md:mx-auto">
-                <div className="animated col-span-12 h-32 max-h-32 w-full rounded-md bg-brand-accent-25 p-1">
-                    <p className="text-white">PODCAST PLAYER LINK</p>
+            {/* <div className="animated mx-5 mt-5 max-w-7xl shadow-sm md:mx-auto md:hidden">
+                <div className="animated col-span-12 flex h-32 max-h-32 w-full flex-col items-center justify-center rounded-md bg-brand-accent-25 p-1">
+                    <h3 className="text-2xl font-bold text-white">الخُطَب</h3>
+                    <div className="flex items-center justify-center text-white">
+                        <IconPlayerSkipBack className="size-15" />
+                        <PlayCircleIcon className="size-20" />
+                        <IconPlayerSkipForward className="size-15" />
+                    </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

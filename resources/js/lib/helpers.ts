@@ -23,6 +23,14 @@ export type NavLink = {
     }[];
 };
 
+export const moreLinks = [
+    { label: 'القرآن الكريم', href: quranChapters().url },
+    { label: 'حصن المسلم', href: hisnul().url },
+    { label: 'أسماء الله الحسنى​', href: husna().url },
+    { label: 'التقويم', href: calendar().url },
+    { label: 'الخُطَب', href: sermon().url },
+];
+
 export function navLinks(): NavLink[] {
     return [
         { label: 'الرئيسية', href: home().url },
@@ -31,13 +39,7 @@ export function navLinks(): NavLink[] {
             label: 'الخدمات',
             isDropdown: true,
             href: '#',
-            children: [
-                { label: 'القرآن الكريم', href: quranChapters().url },
-                { label: 'حصن المسلم', href: hisnul().url },
-                { label: 'أسماء الله الحسنى​', href: husna().url },
-                { label: 'التقويم', href: calendar().url },
-                { label: 'الخُطَب', href: sermon().url },
-            ],
+            children: moreLinks,
         },
         { label: 'الفعاليات', href: event().url },
         { label: 'الأخبار', href: news().url },
