@@ -27,7 +27,7 @@ export default function Media({ playlists }: Prop) {
                         <MediaPlayer
                             sources={
                                 playlists &&
-                                playlists[0].medias.map((item) => ({
+                                playlists[0]?.medias.map((item) => ({
                                     src: item.video_url,
                                 }))
                             }
