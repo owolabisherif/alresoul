@@ -10,7 +10,7 @@ const IMA_SDK_URL =
   "https://imasdk.googleapis.com/js/sdkloader/ima3.js";
 
 // Your content video
-const CONTENT_URL = "//vjs.zencdn.net/v/oceans.mp4";
+// const CONTENT_URL = "//vjs.zencdn.net/v/oceans.mp4";
 
 // Your Revive VAST endpoint
 const VAST_URL =
@@ -23,7 +23,8 @@ type Prop = {
     MID_ROLLS: number[]
 }
 
-export default function ImaVideoPlayer() {
+export default function ImaVideoPlayer({CONTENT_URL}: {CONTENT_URL: string}) {
+
   const ctx = useVideoPlayerContext()
 
   const videoRef = useRef(null);
@@ -48,43 +49,13 @@ export default function ImaVideoPlayer() {
   // Prevent pre-roll from being requested more than once
   const preRollRequestedRef = useRef(false);
 
-  useEffect(() => {
-    let destroyed = false;
 
-    async function init() {
-      try {
-        await loadImaSdk();
-
-        if (destroyed || !videoRef.current) {
-          return;
-        }
-
-        initializePlayer();
-      } catch (error) {
-        console.error(
-          "Failed to initialize IMA:",
-          error
-        );
-      }
-    }
-
-    init();
-
-    return () => {
-      destroyed = true;
-      cleanup();
-    };
-  }, []);
-
-  /**
-   * Load Google IMA SDK once.
-   */
   function loadImaSdk() {
     return new Promise((resolve, reject) => {
-      // if (window.google.ima) {
-      //   resolve(true);
-      //   return;
-      // }
+      if (window.google?.ima) {
+        resolve(true);
+        return;
+      }
 
       const existingScript =
         document.querySelector(
@@ -120,6 +91,38 @@ export default function ImaVideoPlayer() {
       document.head.appendChild(script);
     });
   }
+
+  useEffect(() => {
+    let destroyed = false;
+
+    async function init() {
+      try {
+        await loadImaSdk();
+
+        if (destroyed || !videoRef.current) {
+          return;
+        }
+
+        initializePlayer();
+      } catch (error) {
+        console.error(
+          "Failed to initialize IMA:",
+          error
+        );
+      }
+    }
+
+    init();
+
+    return () => {
+      destroyed = true;
+      cleanup();
+    };
+  }, []);
+
+  /**
+   * Load Google IMA SDK once.
+   */
 
   /**
    * Initialize Video.js and IMA.

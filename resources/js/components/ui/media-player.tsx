@@ -53,6 +53,7 @@ export function useVideoPlayerContext() {
 }
 
 export default function MediaPlayer({sources}: VideoPlayerProp) {
+
     const ctx = useVideoPlayerContext()
     const [videoSource, setVideoSource] = useState<VideoSourceType[]>([])
 
@@ -61,8 +62,8 @@ export default function MediaPlayer({sources}: VideoPlayerProp) {
 //    </div>
 
     useEffect(() => {
-        console.log(ctx?.playingStarted)
-    }, [ctx?.playingStarted])
+        console.log(sources)
+    }, [sources])
 
     const handleSetVideoSource = () => {
         var sourceList: VideoSourceType[] = [];
@@ -77,6 +78,6 @@ export default function MediaPlayer({sources}: VideoPlayerProp) {
     };
 
     return <VideoPlayerContext>
-        <ImaVideoPlayer/>
+        {sources && sources.length && <ImaVideoPlayer CONTENT_URL={sources[0].src}/>}
     </VideoPlayerContext>
 }
