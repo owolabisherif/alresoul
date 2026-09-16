@@ -179,7 +179,7 @@ export default function GuestHeaderLayout({
                     }}
                 />
             </Head>
-            <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-brand-accent/80 backdrop-blur-md backdrop-hue-rotate-30">
+            <header className="fixed top-0 z-200 w-full border-b border-border/40 bg-brand-accent/80 backdrop-blur-md backdrop-hue-rotate-30">
                 <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
                     <Link href={home()} className="flex w-42">
                         <img
